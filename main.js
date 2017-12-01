@@ -5,6 +5,42 @@ yyy.width = pageWidth
 yyy.height = pageHeight
 
 var context = yyy.getContext('2d');
+var eraserEnabled = false
+brush.onclick = function(){
+    eraserEnabled = false
+    brush.classList.add('active')
+    eraser.classList.remove('active')
+}
+
+eraser.onclick = function(){
+    eraserEnabled = true
+    brush.classList.remove('active')
+    eraser.classList.add('active')
+}
+
+red.onclick = function(){
+    context.fillStyle = 'red'
+    context.strokeStyle = 'red'
+    red.classList.add('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+}
+
+green.onclick = function(){
+    context.fillStyle = 'green'
+    context.strokeStyle = 'green'
+    red.classList.remove('active')
+    green.classList.add('active')
+    blue.classList.remove('active')
+}
+
+blue.onclick = function(){
+    context.fillStyle = 'blue'
+    context.strokeStyle = 'blue'
+    red.classList.remove('active')
+    green.classList.remove('active')
+    blue.classList.add('active')
+}
 
 
 function darwCircle(x, y, radius) {
@@ -81,14 +117,6 @@ if(document.body.ontouchstart !== undefined){
         painting = false
     }
     
-    function drawLine (x1, y1, x2, y2){
-        context.beginPath();
-        context.moveTo(x1, y1) // 起点
-        context.lineWidth = 5
-        context.lineTo(x2, y2)
-        context.stroke()
-        context.closePath()
-    }
 }
 
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,24 @@
     <title>Canvas-demo</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <canvas id="xxx"></canvas>
+    <div id="actions" class="actions">
+        <svg id="brush" class="active icon" aria-hidden="true">
+            <use xlink:href="#icon-pen"></use>
+        </svg>
+        <svg id="eraser" class="icon" aria-hidden="true">
+            <use xlink:href="#icon-erase"></use>
+        </svg>
+    </div>
+    <ol class="colors">
+        <li id="red" class="red active"></li>
+        <li id="green" class="green"></li>
+        <li id="blue" class="blue"></li>
+    </ol>
 </body>
 <script src="main.js"></script>
+<script src="//at.alicdn.com/t/font_494698_pyonvrgu8m5nrk9.js"></script>
+
 </html>
